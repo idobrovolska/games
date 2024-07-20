@@ -2,8 +2,7 @@
 we're implementing the class of object - card, and a class of main event - game. the second contains methods 
 to handle subevents, bonded to several objects - event handlers (create the grid with buttons-cards, click on 
 TWO cards and check if they are similar).
-*it's good to set the activity status to cards to make them inactive when they're played.
-the program asks the user about grid size (quantity of cards he wants to guess).
+The program asks the user about grid size (quantity of cards he wants to guess).
 '''
 
 import tkinter as tk
@@ -122,8 +121,8 @@ if __name__ == "__main__":
     root = tk.Tk()
     root.title("Memory training")  
     root.geometry("400x300")  
-    rows = simpledialog.askinteger("Input", "Enter number of rows:", minvalue = 2, maxvalue = 10)
-    columns = simpledialog.askinteger("Input", "Enter number of columns:", minvalue = 2, maxvalue = 10)
+    rows = simpledialog.askinteger("Input", "Enter number of rows:", minvalue = 2, maxvalue = 5)
+    columns = simpledialog.askinteger("Input", "Enter number of columns:", minvalue = 2, maxvalue = 5)
     
     try:
         game = MemoryGame(root, rows, columns)
